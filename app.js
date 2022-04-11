@@ -11,7 +11,7 @@ const successss = (position) => {
   fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=ba2dcfb4c6a3429190566b8f5c2a53ca`)
   .then(response => response.json())
   .then(data=>{
-    let x=data["results"][0]["components"]["state_district"]
+    let x=data["results"][0]["components"]["city"]
     loca=x;
     function locati(){
       fetch('https://api.openweathermap.org/data/2.5/weather?q='+loca+'&appid=4d09cd0e0c359927e26a1df8e5a0de90').then((res)=>{
